@@ -2,6 +2,12 @@ name: manual trigger
 
 on:
   workflow_dispatch:
+    inputs:
+      askName:
+        required: true
+        type: string
+        default: "Stranger"
+        description: "Hello There, What's your name !!"
     
 
 jobs:
@@ -10,3 +16,5 @@ jobs:
     steps:
       - name: time_check
         run: date
+      - name: greet
+        run: echo "Hello ${{ inputs.askName }}"
