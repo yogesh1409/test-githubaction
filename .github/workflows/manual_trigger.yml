@@ -18,3 +18,11 @@ jobs:
         run: date
       - name: greet
         run: echo "Hello ${{ inputs.askName }}"
+      - name: "Check Host Name"
+        run: hostname
+  check_selfhosted:
+    runs-on: self-hosted
+    steps:
+      - name: "Check Host Name"
+        run: hostname
+      
