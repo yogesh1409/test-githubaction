@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: time_check
-        runs: date
+        run: date
